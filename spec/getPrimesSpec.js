@@ -29,9 +29,9 @@ describe("Get Primes Tests", function(){
       		expect(app.getPrimes([1,2,3])).toEqual('invalid input');
     	});
 
-    it("should return 'input cannot be zero' for 0", function() {
-          expect(app.getPrimes(0)).toBe('input cannot be zero');
-        });
+    it("should return 'input cannot be empty' for empty", function() {
+          expect(app.getPrimes()).toBe('invalid input');
+      });
 
 	});
 
@@ -49,10 +49,6 @@ describe("Get Primes Tests", function(){
 	describe("Zero Input",function(){
 		it("should return 'input cannot be zero' for 0", function() {
       		expect(app.getPrimes(0)).toBe('input cannot be zero');
-      });
-
-    it("should return 'input cannot be empty' for empty", function() {
-          expect(app.getPrimes()).toBe('input cannot be empty');
       });
 	})
 });
