@@ -18,6 +18,10 @@ describe("Get Primes Tests", function(){
     it("should return [2,3,5,7,11,13,17] for 17",function(){
       expect(app.getPrimes(7)).toEqual([2,3,5,7]);
     });
+
+    it("should return '1' for  1",function(){
+      expect(app.getPrimes(1)).toEqual([1]);
+    });
   });
 	
   describe("Invalid Input",function(){
@@ -29,8 +33,13 @@ describe("Get Primes Tests", function(){
       		expect(app.getPrimes([1,2,3])).toEqual('invalid input');
     	});
 
-    it("should return 'input cannot be empty' for empty", function() {
+    it("should return 'invalid input' for empty", function() {
           expect(app.getPrimes()).toBe('invalid input');
+      });
+
+    it("should return 'invalid input' for boolean values", function() {
+          expect(app.getPrimes(true)).toBe('invalid input');
+          expect(app.getPrimes(false)).toBe('invalid input');
       });
 
 	});
