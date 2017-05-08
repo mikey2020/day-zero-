@@ -1,0 +1,22 @@
+{
+  "name": "day-zero",
+  "version": "1.0.0",
+  "description": "Andela day zero tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikey2020/day-zero-.git"
+  },
+  "author": "Michael Eboagu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikey2020/day-zero-/issues"
+  },
+  "homepage": "https://github.com/mikey2020/day-zero-#readme",
+  "devDependencies": {
+    "jasmine": "^2.6.0"
+  }
+}
