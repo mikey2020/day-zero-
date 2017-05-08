@@ -12,7 +12,7 @@ describe("Get Primes Tests", function(){
       });
 
     it("should return [2,3,5,7] for 7",function(){
-      expect(app.getPrimes(7).toEqual([2,3,5,7]));
+      expect(app.getPrimes(7)).toEqual([2,3,5,7]);
     })
 
   });

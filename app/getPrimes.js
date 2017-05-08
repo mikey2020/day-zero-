@@ -1,19 +1,34 @@
 module.exports = {
+	
 
-	getPrimes: (integer) => {
-
-		for(let count = 0; count < integer; count++){
-
+	getPrimes: (value) => {
+		let primesList = [];
+		for(let count = 1; count <= value; count++){
+			if(checkPrimes(count) == true){
+				primesList.push(count);
+			}
+			
 		}
+
+		return primesList;
 	}
 
 
-	checkPrimes: (value) => {
-		let numberOfPrimes = 0;
-		for(let count = 1; count < integer; count++){
-			if(value % count == 0){
+	
+}
 
+const checkPrimes = (value) => {
+		let factors = 0;
+		for(let count = 1; count <= value; count++){
+			if(value % count == 0){
+				factors++;
 			}
 		}
-	}
+		if(factors > 2){
+			return false;
+		}
+
+		else if(factors === 2){
+			return true;
+		}
 }
