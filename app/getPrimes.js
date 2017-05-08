@@ -2,6 +2,12 @@ module.exports = {
 	
 
 	getPrimes: (value) => {
+		if(typeof value != 'number'){
+			return "invalid input";
+		}
+		else if(value <= 0){
+			return 'only positive values allowed';
+		}
 		let primesList = [];
 		for(let count = 1; count <= value; count++){
 			if(checkPrimes(count) == true){
