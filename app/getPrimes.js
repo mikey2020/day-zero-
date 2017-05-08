@@ -5,8 +5,11 @@ module.exports = {
 		if(typeof value != 'number'){
 			return "invalid input";
 		}
-		else if(value <= 0){
+		else if(value < 0){
 			return 'only positive values allowed';
+		}
+		else if(value === 0){
+			return 'input cannot be zero';
 		}
 		let primesList = [];
 		for(let count = 1; count <= value; count++){
