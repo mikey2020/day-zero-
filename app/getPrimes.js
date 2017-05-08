@@ -1,43 +1,39 @@
-module.exports = {
-	
+  module.exports = {
 
-	getPrimes: (value) => {
-		if(typeof value != 'number'){
-			return "invalid input";
-		}
-		else if(value < 0){
-			return 'only positive values allowed';
-		}
-		else if(value === 0){
-			return 'input cannot be zero';
-		}
-		let primesList = [];
-		for(let count = 1; count <= value; count++){
-			if(checkPrimes(count) == true){
-				primesList.push(count);
-			}
-			
-		}
+	getPrimes: (integer) => {
+		list = [];
 
-		return primesList;
-	}
+    if(integer < 0 ){
+      return "only positive values allowed";
+    }
+    
+    else if(integer == 0){
+      return "input cannot be zero";
+    }
+    
+    else if(typeof(integer) != "number"){
+      return "invalid input";
+    }
+  
+    for(let i = 0; i <= integer; i++){
+      
+      let count = 0 ;//to determine number of divisors a value has 
+      
+      let j = 0 ;
+      
+      while(j <= i) {//to check number of times a number is divisible 
+        
+        if(i % j === 0  ){
+          ++count;
+          }
+          j++;
+        }
+      
+      if(count === 2){
+        list.push(i);
+      }  
+    }
 
-
-	
-}
-
-const checkPrimes = (value) => {
-		let factors = 0;
-		for(let count = 1; count <= value; count++){
-			if(value % count == 0){
-				factors++;
-			}
-		}
-		if(factors > 2){
-			return false;
-		}
-
-		else if(factors === 2){
-			return true;
-		}
+    return list;
+  }	
 }
