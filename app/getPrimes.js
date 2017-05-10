@@ -11,6 +11,9 @@ module.exports = {
 		else if(value === 0){
 			return 'input cannot be zero';
 		}
+		else if(value == 1){
+			return [value];
+		}
 		let primesList = [];
 		for(let count = 1; count <= value; count++){
 			if(checkPrimes(count) == true){
